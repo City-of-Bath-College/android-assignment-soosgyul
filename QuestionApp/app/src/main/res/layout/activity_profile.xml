@@ -8,11 +8,12 @@
     <ImageView
         android:id="@+id/HeaderImage"
         android:layout_width="wrap_content"
-        android:layout_height="250dp"
+        android:layout_height="150dp"
         android:src="@drawable/newyork"
         android:scaleType="centerCrop"
     />
     <ImageView
+        android:id="@+id/face"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/emoji"
@@ -31,6 +32,79 @@
         android:layout_below="@id/HeaderImage"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="140dp"
+        />
+
+    <ImageView
+        android:id="@+id/logoPhone"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/face"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/phoneIcon"
+        />
+
+    <ImageView
+        android:id="@+id/logoEmail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/logoPhone"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/emailIcon"
+        />
+
+    <ImageView
+        android:id="@+id/logoWebSite"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/logoEmail"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/ic_language_black_48dp"
+        />
+
+
+    <TextView
+        android:id="@+id/PhoneNumber"
+        android:text="0755 31 92 803"
+        android:layout_toRightOf="@id/logoPhone"
+        android:layout_alignBottom="@id/logoPhone"
+        android:layout_alignTop="@id/logoPhone"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:textSize="20dp"
+        android:textColor="#000000"
+    />
+
+    <TextView
+        android:id="@+id/email"
+        android:text="soosgyul@gmail.com"
+        android:layout_toRightOf="@id/logoEmail"
+        android:layout_alignBottom="@id/logoEmail"
+        android:layout_alignTop="@id/logoEmail"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/website"
+        android:text="www.designjulio.com"
+        android:layout_toRightOf="@id/logoWebSite"
+        android:layout_alignBottom="@id/logoWebSite"
+        android:layout_alignTop="@id/logoWebSite"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:textSize="20dp"
+        android:textColor="#000000"
         />
 
 
