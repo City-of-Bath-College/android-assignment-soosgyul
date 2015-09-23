@@ -1,0 +1,37 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="questionapp.gyula.gs.com.questionapp.ProfileActivity">
+
+    <ImageView
+        android:id="@+id/HeaderImage"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:src="@drawable/newyork"
+        android:scaleType="centerCrop"
+    />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/emoji"
+        android:layout_below="@id/HeaderImage"
+        android:layout_marginTop="-50dp"
+        android:layout_marginLeft="25dp"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:background="#000000"
+        android:text="Gyula Soos"
+        android:textSize="25dp"
+        android:layout_below="@id/HeaderImage"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="140dp"
+        />
+
+
+</RelativeLayout>
