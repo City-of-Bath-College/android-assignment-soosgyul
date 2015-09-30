@@ -41,7 +41,7 @@
         android:layout_below="@id/face"
         android:layout_marginTop="65dp"
         android:layout_marginLeft="25dp"
-        android:src="@drawable/phoneIcon"
+        android:src="@drawable/ic_phone_black_48dp"
         />
 
     <ImageView
@@ -51,7 +51,7 @@
         android:layout_below="@id/logoPhone"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="25dp"
-        android:src="@drawable/emailIcon"
+        android:src="@drawable/ic_email_black_48dp"
         />
 
     <ImageView
