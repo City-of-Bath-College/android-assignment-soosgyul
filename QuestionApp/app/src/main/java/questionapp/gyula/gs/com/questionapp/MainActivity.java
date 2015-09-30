@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-//this part
+    //this part is still not figured out
     private void generateQuestions(){
 
         questions = ArrayList<>();
