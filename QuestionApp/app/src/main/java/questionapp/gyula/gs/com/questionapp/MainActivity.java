@@ -55,12 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     //this part is still not figured out
-    private void generateQuestions(){
+   // private void generateQuestions(){
+    //
+   //     questions = ArrayList<>();
+    //
+    //    questions.add(new QuestionObject("Is this an iOS phone?", "yes", "no", false, R.drawable.android));
 
-        questions = ArrayList<>();
-
-        questions.add(new QuestionObject("Is this an iOS phone?", "yes", "no", false, R.drawable.android));
-
-    }
+    //}
 }
 }
