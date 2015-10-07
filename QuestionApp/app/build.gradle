@@ -5,8 +5,8 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "questionapp.gyula.gs.com.questionapp"
-        minSdkVersion 15
+        applicationId "com.gyula.gs.com.questionapp"
+        minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
