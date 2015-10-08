@@ -211,7 +211,7 @@
     <!-- From: file:/D:/Dokumentumok/College/!VASS/android-assignment-soosgyul/QuestionApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
-    <string name="app_name">Question App</string>
+    <string name="app_name">QuestionApp</string>
     <string name="hello_world">Hello world!</string>
     <!-- From: file:/D:/Dokumentumok/College/!VASS/android-assignment-soosgyul/QuestionApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>

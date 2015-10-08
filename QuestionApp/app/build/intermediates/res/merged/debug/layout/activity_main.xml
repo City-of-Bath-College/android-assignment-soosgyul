@@ -14,7 +14,7 @@
         android:src="#FFF000" />
 
     <TextView
-        android:id="@+id/txtQuestion"
+        android:id="@+id/lblQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgPicture"
@@ -31,7 +31,7 @@
         android:layout_height="60dp"
         android:text="True"
         android:layout_margin="10dp"
-        android:layout_below="@+id/txtQuestion"
+        android:layout_below="@+id/lblQuestion"
         android:layout_alignParentLeft="true"/>
 
     <Button
@@ -39,11 +39,20 @@
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:text="False"
-        android:layout_below="@+id/txtQuestion"
+        android:layout_below="@+id/lblQuestion"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
         />
 
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/btnTrue"
+        android:layout_marginTop="55dp"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>
 <!-- From: file:/D:/Dokumentumok/College/!VASS/android-assignment-soosgyul/QuestionApp/app/src/main/res/layout/activity_main.xml -->
