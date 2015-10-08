@@ -29,7 +29,7 @@
         android:id="@+id/btnTrue"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:text="True"
+        android:text="Option 1"
         android:layout_margin="10dp"
         android:layout_below="@+id/lblQuestion"
         android:layout_alignParentLeft="true"/>
@@ -38,7 +38,7 @@
         android:id="@+id/btnFalse"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:text="False"
+        android:text="Option 2"
         android:layout_below="@+id/lblQuestion"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"

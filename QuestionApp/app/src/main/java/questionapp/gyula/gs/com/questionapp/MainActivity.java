@@ -42,17 +42,25 @@ public class MainActivity extends AppCompatActivity {
         startGame();
     }
 
+    //this holds the questions
     private void generateQuestions(){
         questions = new ArrayList<>();
 
-        questions.add(new QuestionObject("This is the first question?", true, R.drawable.cuba));
-        questions.add(new QuestionObject("This is the second question?", true, R.drawable.cuba));
-        questions.add(new QuestionObject("This is the third question?", true, R.drawable.cuba));
-        questions.add(new QuestionObject("This is the fourth question?", true, R.drawable.cuba));
+        //the first option is the button on the left. if the boolean set to false then the second option is correct
+        questions.add(new QuestionObject("Where was the picture taken?", true, R.drawable.cuba, "cuba", "singapore" ));
+        questions.add(new QuestionObject("This city is in which country?", false, R.drawable.barcelona,"Hungary", "Spain"));
+        questions.add(new QuestionObject("The steak should never be served:", true, R.drawable.steak, "well done", "medium"));
+        questions.add(new QuestionObject("Who is on the picture?", true, R.drawable.nationalanthem, "Sacha Baron Cohen", "Freddie Mercury"));
+        questions.add(new QuestionObject("If you pay, you can swim alone in china?", true, R.drawable.china, "It is true", "Twaddle"));
+        questions.add(new QuestionObject("How much liquid you can take to an airplane?", false, R.drawable.customs, "no more than 1l", "10x100ml"));
+        questions.add(new QuestionObject("This is...", false, R.drawable.deface, "£10", "illegal in the uk"));
+        questions.add(new QuestionObject("This should be...", true, R.drawable.flipflops, "illegal", "compulsory"));
+        questions.add(new QuestionObject("What do you need to bring to a netflix and chill session?", false, R.drawable.valentinesday, "popcorn", "durex"));
+        questions.add(new QuestionObject("What is on the picture?", false, R.drawable.pufferfish, "Baseball ball", "Pufferfish"));
     }
-
+    //this puts the questions together. stops when there are no more questions
     private void setUpQuestions(){
-        if (index == questions.size()){
+        if (index == questions.size()){ //if no more questions, jumps to the endGame
             Log.d("QuestionApp", "ended all the questions");
             endGame();
         }else {
@@ -60,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
 
             lblQuestion.setText(currentQuestion.getQuestion());
             imgPicture.setImageResource(currentQuestion.getPicture());
-
-
+            btnTrue.setText(currentQuestion.getOption1());
+            btnFalse.setText(currentQuestion.getOption2());
             index++;
         }
     }
