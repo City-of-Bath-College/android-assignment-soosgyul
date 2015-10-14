@@ -16,6 +16,14 @@
         <activity
             android:name="questionapp.gyula.gs.com.questionapp.MainActivity"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="questionapp.gyula.gs.com.questionapp.ProfileCard"
+            android:label="@string/title_activity_profile_card" >
+        </activity>
+        <activity
+            android:name="questionapp.gyula.gs.com.questionapp.IntroductionActivity"
+            android:label="@string/title_activity_introduction" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

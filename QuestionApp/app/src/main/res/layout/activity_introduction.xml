@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="questionapp.gyula.gs.com.questionapp.IntroductionActivity">
+
+    <ImageView
+        android:id="@+id/imgWelcomeImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/mainimage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        />
+
+    <TextView
+        android:id="@+id/txtGreeting"
+        android:text="Howdy! \n What do you want to do today?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgWelcomeImage"
+        android:textSize="35sp"
+        android:gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/btnStartGame"
+        android:text="Start game"
+        android:layout_width="150sp"
+        android:layout_height="50sp"
+        android:layout_below="@+id/txtGreeting"
+        android:layout_marginTop="15sp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnStats"
+        android:text="Stats"
+        android:layout_width="150sp"
+        android:layout_height="50sp"
+        android:layout_below="@+id/btnStartGame"
+        android:layout_marginTop="15sp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnAbout"
+        android:text="About"
+        android:layout_width="150sp"
+        android:layout_height="50sp"
+        android:layout_below="@+id/btnStats"
+        android:layout_marginTop="15sp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
