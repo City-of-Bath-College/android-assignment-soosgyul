@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .create();
         alertDialog.show();
+        startGame();//i'll start the game again here, so there is no cheating
     }
 
     private void startGame(){
