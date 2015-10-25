@@ -7,12 +7,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class IntroductionActivity extends AppCompatActivity {
 
     private Button btnPlay;
     private Button btnAbout;
     private Button btnStats;
+    private TextView txtHighScore;
+    private int highScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,8 @@ public class IntroductionActivity extends AppCompatActivity {
         btnPlay = (Button)findViewById(R.id.btnStartGame);
         btnStats = (Button)findViewById(R.id.btnStats);
         btnAbout = (Button)findViewById(R.id.btnAbout);
+        txtHighScore = (TextView)findViewById(R.id.txtHighScore);
+
 
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override

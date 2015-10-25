@@ -9,7 +9,7 @@
         android:layout_height="150dp"
         android:src="@drawable/mainimage"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="15sp"
         />
 
     <TextView
@@ -28,7 +28,7 @@
         android:layout_width="150sp"
         android:layout_height="50sp"
         android:layout_below="@+id/txtGreeting"
-        android:layout_marginTop="15sp"
+        android:layout_marginTop="10sp"
         android:layout_centerHorizontal="true"/>
 
     <Button
@@ -37,7 +37,7 @@
         android:layout_width="150sp"
         android:layout_height="50sp"
         android:layout_below="@+id/btnStartGame"
-        android:layout_marginTop="15sp"
+        android:layout_marginTop="10sp"
         android:layout_centerHorizontal="true"/>
 
     <Button
@@ -46,7 +46,16 @@
         android:layout_width="150sp"
         android:layout_height="50sp"
         android:layout_below="@+id/btnStats"
-        android:layout_marginTop="15sp"
+        android:layout_marginTop="10sp"
         android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtHighScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAbout"
+        android:text="Current high score:"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10sp"/>
 
 </RelativeLayout>

@@ -464,10 +464,10 @@ int id alertTitle 0x7f0c002e
 int id always 0x7f0c001b
 int id beginning 0x7f0c0018
 int id btnAbout 0x7f0c0051
-int id btnFalse 0x7f0c0055
+int id btnFalse 0x7f0c0056
 int id btnStartGame 0x7f0c004f
 int id btnStats 0x7f0c0050
-int id btnTrue 0x7f0c0054
+int id btnTrue 0x7f0c0055
 int id buttonPanel 0x7f0c0034
 int id cancel_action 0x7f0c0063
 int id checkbox 0x7f0c0036
@@ -495,10 +495,10 @@ int id imgGithub 0x7f0c0060
 int id imgLocation 0x7f0c005a
 int id imgMainImage 0x7f0c0057
 int id imgPhone 0x7f0c005c
-int id imgPicture 0x7f0c0052
+int id imgPicture 0x7f0c0053
 int id imgWelcomeImage 0x7f0c004d
 int id info 0x7f0c006d
-int id lblQuestion 0x7f0c0053
+int id lblQuestion 0x7f0c0054
 int id line1 0x7f0c0067
 int id line3 0x7f0c006b
 int id listMode 0x7f0c0009
@@ -550,7 +550,7 @@ int id txtGreeting 0x7f0c004e
 int id txtLocation 0x7f0c005b
 int id txtName 0x7f0c0059
 int id txtPhone 0x7f0c005d
-int id txtScore 0x7f0c0056
+int id txtScore 0x7f0c0052
 int id up 0x7f0c0008
 int id useLogo 0x7f0c0012
 int id withText 0x7f0c001f

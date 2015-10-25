@@ -1605,10 +1605,10 @@ containing a value of this type.
         public static final int always=0x7f0c001b;
         public static final int beginning=0x7f0c0018;
         public static final int btnAbout=0x7f0c0051;
-        public static final int btnFalse=0x7f0c0055;
+        public static final int btnFalse=0x7f0c0056;
         public static final int btnStartGame=0x7f0c004f;
         public static final int btnStats=0x7f0c0050;
-        public static final int btnTrue=0x7f0c0054;
+        public static final int btnTrue=0x7f0c0055;
         public static final int buttonPanel=0x7f0c0034;
         public static final int cancel_action=0x7f0c0063;
         public static final int checkbox=0x7f0c0036;
@@ -1636,10 +1636,10 @@ containing a value of this type.
         public static final int imgLocation=0x7f0c005a;
         public static final int imgMainImage=0x7f0c0057;
         public static final int imgPhone=0x7f0c005c;
-        public static final int imgPicture=0x7f0c0052;
+        public static final int imgPicture=0x7f0c0053;
         public static final int imgWelcomeImage=0x7f0c004d;
         public static final int info=0x7f0c006d;
-        public static final int lblQuestion=0x7f0c0053;
+        public static final int lblQuestion=0x7f0c0054;
         public static final int line1=0x7f0c0067;
         public static final int line3=0x7f0c006b;
         public static final int listMode=0x7f0c0009;
@@ -1691,7 +1691,7 @@ containing a value of this type.
         public static final int txtLocation=0x7f0c005b;
         public static final int txtName=0x7f0c0059;
         public static final int txtPhone=0x7f0c005d;
-        public static final int txtScore=0x7f0c0056;
+        public static final int txtScore=0x7f0c0052;
         public static final int up=0x7f0c0008;
         public static final int useLogo=0x7f0c0012;
         public static final int withText=0x7f0c001f;

@@ -1,14 +1,17 @@
 package questionapp.gyula.gs.com.questionapp;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +19,10 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+
+import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,10 +34,12 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtScore;
     private ImageView imgPicture;
 
+    private String playerName = "";
+
     private List<QuestionObject> questions;
     private QuestionObject currentQuestion;
     private int index;
-    private int score;
+    private int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +104,24 @@ public class MainActivity extends AppCompatActivity {
         final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this)
                 .setTitle("Congratulations")
                 .setMessage("You scored " + score + " points this round.")
-                .setNeutralButton("restart", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        startGame();
-                    }
-                })
+                .setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                //high score
+                getPlayerName();
+                HighScoreObject highScore = new HighScoreObject(playerName, score, new Date().getTime());
+                //get user prefs
+                List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
+
+                //add item
+                highScores.add(highScore);
+
+                //save again
+                Paper.book().write("high scores", score);
+
+                //return to the intro screen
+                finish();
+            }
+        })
                 .create();
         alertDialog.show();
         startGame();//i'll start the game again here, so there is no cheating
@@ -132,5 +153,34 @@ public class MainActivity extends AppCompatActivity {
         });
         generateQuestions();
         setUpQuestions();
+
+        Paper.init(this);
+    }
+
+    private void getPlayerName(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Title");
+
+// Set up the input
+        final EditText input = new EditText(this);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+        input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        builder.setView(input);
+
+// Set up the buttons
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                playerName = input.getText().toString();
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
     }
 }
