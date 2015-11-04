@@ -125,10 +125,11 @@ public class MainActivity extends AppCompatActivity {
                 .create();
         alertDialog.show();
         //i'll start the game again here, so there is no cheating
-        startGame();
+        //startGame();
     }
 
     private void startGame(){
+
         btnFalse = (Button) findViewById(R.id.btnFalse);
         btnTrue = (Button) findViewById(R.id.btnTrue);
         lblQuestion = (TextView) findViewById(R.id.lblQuestion);

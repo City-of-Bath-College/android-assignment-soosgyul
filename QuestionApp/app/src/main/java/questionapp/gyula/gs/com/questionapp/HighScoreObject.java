@@ -14,6 +14,10 @@ public class HighScoreObject {
         this.timestamp = timestamp;
     }
 
+
+    public HighScoreObject(){}
+
+
     public String getName(){return name;}
     public int getScore(){return highScore;}
     public long getTimestamp() {return timestamp;}
