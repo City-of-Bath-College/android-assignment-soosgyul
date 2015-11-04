@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         startGame();
+        Paper.init(this);
     }
 
     //this holds the questions
@@ -107,8 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 .setNeutralButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 //high score
-                getPlayerName();
-                HighScoreObject highScore = new HighScoreObject(playerName, score, new Date().getTime());
+                HighScoreObject highScore = new HighScoreObject("Gyula", score, new Date().getTime());
                 //get user prefs
                 List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
 
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 highScores.add(highScore);
 
                 //save again
-                Paper.book().write("high scores", score);
+                Paper.book().write("high scores", highScores);
 
                 //return to the intro screen
                 finish();
@@ -124,7 +124,8 @@ public class MainActivity extends AppCompatActivity {
         })
                 .create();
         alertDialog.show();
-        startGame();//i'll start the game again here, so there is no cheating
+        //i'll start the game again here, so there is no cheating
+        startGame();
     }
 
     private void startGame(){
@@ -153,34 +154,5 @@ public class MainActivity extends AppCompatActivity {
         });
         generateQuestions();
         setUpQuestions();
-
-        Paper.init(this);
-    }
-
-    private void getPlayerName(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Title");
-
-// Set up the input
-        final EditText input = new EditText(this);
-// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-        input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        builder.setView(input);
-
-// Set up the buttons
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                playerName = input.getText().toString();
-            }
-        });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
-
-        builder.show();
     }
 }

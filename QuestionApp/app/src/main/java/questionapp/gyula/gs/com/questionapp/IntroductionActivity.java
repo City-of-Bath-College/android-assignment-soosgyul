@@ -22,9 +22,6 @@ public class IntroductionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_introduction);
 
-
-
-
         btnPlay = (Button)findViewById(R.id.btnStartGame);
         btnStats = (Button)findViewById(R.id.btnStats);
         btnAbout = (Button)findViewById(R.id.btnAbout);
