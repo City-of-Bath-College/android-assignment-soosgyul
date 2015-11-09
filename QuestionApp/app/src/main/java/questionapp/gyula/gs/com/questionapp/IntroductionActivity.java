@@ -36,7 +36,7 @@ public class IntroductionActivity extends AppCompatActivity {
 
 
         //get user prefs
-        //List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
+        List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
 
         int maxScore = 0;
         if (highScores.size() > 0){
