@@ -218,6 +218,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <!-- From: file:/U:/android-assignment-soosgyul/QuestionApp/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="title_activity_high_score">HighScoreActivity</string>
     <string name="title_activity_introduction">IntroductionActivity</string>
     <string name="title_activity_profile_card">ProfileCard</string>
     <!-- From: file:/U:/android-assignment-soosgyul/QuestionApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->

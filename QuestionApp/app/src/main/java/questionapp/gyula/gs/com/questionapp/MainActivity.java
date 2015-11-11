@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         questions.add(new QuestionObject("Where was the picture taken?", true, R.drawable.cuba, "cuba", "singapore" ));
         questions.add(new QuestionObject("This city is in which country?", false, R.drawable.barcelona,"Hungary", "Spain"));
         questions.add(new QuestionObject("The steak should never be served:", true, R.drawable.steak, "well done", "medium"));
+        /*
         questions.add(new QuestionObject("Who is on the picture?", true, R.drawable.nationalanthem, "Sacha Baron Cohen", "Freddie Mercury"));
         questions.add(new QuestionObject("If you pay, you can swim alone in china?", true, R.drawable.china, "It is true", "Twaddle"));
         questions.add(new QuestionObject("How much liquid you can take to an airplane?", false, R.drawable.customs, "no more than 1l", "10x100ml"));
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         questions.add(new QuestionObject("This should be...", true, R.drawable.flipflops, "illegal", "compulsory"));
         questions.add(new QuestionObject("What do you need to bring to a netflix and chill session?", false, R.drawable.valentinesday, "popcorn", "durex"));
         questions.add(new QuestionObject("What is on the picture?", false, R.drawable.pufferfish, "Baseball ball", "Pufferfish"));
+    */
     }
     //this puts the questions together. stops when there are no more questions
     private void setUpQuestions(){

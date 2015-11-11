@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml:3:5-51
 		INJECTED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManife
 		INJECTED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml
 		INJECTED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml
 application
-ADDED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml:5:5-27:19
+ADDED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml:5:5-31:19
 MERGED from [com.android.support:appcompat-v7:23.0.1] U:\android-assignment-soosgyul\QuestionApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] U:\android-assignment-soosgyul\QuestionApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [io.paperdb:paperdb:1.0] U:\android-assignment-soosgyul\QuestionApp\app\build\intermediates\exploded-aar\io.paperdb\paperdb\1.0\AndroidManifest.xml:11:5-47
@@ -54,6 +54,12 @@ category#android.intent.category.LAUNCHER
 ADDED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
 		ADDED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml:24:27-74
+activity#questionapp.gyula.gs.com.questionapp.HighScoreActivity
+ADDED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml:27:9-30:20
+	android:label
+		ADDED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml:29:13-62
+	android:name
+		ADDED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml:28:13-46
 uses-sdk
 INJECTED from U:\android-assignment-soosgyul\QuestionApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.0.1] U:\android-assignment-soosgyul\QuestionApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43

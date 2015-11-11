@@ -33,13 +33,42 @@ public class IntroductionActivity extends AppCompatActivity {
         txtHighScore = (TextView)findViewById(R.id.txtHighScore);
         Paper.init(this);
 
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(IntroductionActivity.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
 
+        btnStats.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(IntroductionActivity.this, HighScoreActivity.class);
+                startActivity(i);
+            }
+        });
 
-        //get user prefs
-        //List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
+        btnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(IntroductionActivity.this, ProfileCard.class);
+                startActivity(i);
+            }
+        });
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+        updateTheHighScoreOnMainScreen();
+    }
+    private void updateTheHighScoreOnMainScreen() {
+        //this method will loop through all the highscores and will display the highest
+        List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
 
         int maxScore = 0;
         if (highScores.size() > 0){
+
             for( int i = 0; i < highScores.size(); i++){
 
                 HighScoreObject h = highScores.get(i);
@@ -52,29 +81,6 @@ public class IntroductionActivity extends AppCompatActivity {
             //have a message if there are no high scores saved at all
             txtHighScore.setText("There are no high scores stored in the database");
         }
-
-
-        btnPlay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(IntroductionActivity.this, MainActivity.class);
-                startActivity(i);
-            }
-        });
-
-        btnStats.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
-
-        btnAbout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(IntroductionActivity.this, ProfileCard.class);
-                startActivity(i);
-            }
-        });
     }
 
 

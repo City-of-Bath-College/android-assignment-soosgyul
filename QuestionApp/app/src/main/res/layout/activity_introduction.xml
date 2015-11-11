@@ -33,7 +33,7 @@
 
     <Button
         android:id="@+id/btnStats"
-        android:text="Stats"
+        android:text="High Scores"
         android:layout_width="150sp"
         android:layout_height="50sp"
         android:layout_below="@+id/btnStartGame"
