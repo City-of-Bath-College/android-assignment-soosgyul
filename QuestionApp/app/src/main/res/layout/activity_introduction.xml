@@ -58,6 +58,5 @@
         android:text="Current high score is held by \n Gyula\n with the score of\n 10"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25sp"
-        android:textStyle="bold"
        android:gravity="center"/>
 </RelativeLayout>

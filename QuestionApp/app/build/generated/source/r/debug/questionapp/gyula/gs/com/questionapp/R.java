@@ -1633,7 +1633,7 @@ containing a value of this type.
         public static final int imgEmail=0x7f0c0061;
         public static final int imgEmoji=0x7f0c005b;
         public static final int imgGithub=0x7f0c0063;
-        public static final int imgHighScoreBanner=0x7f0c004d;
+        public static final int imgHighScoreBanner=0x7f0c004e;
         public static final int imgLocation=0x7f0c005d;
         public static final int imgMainImage=0x7f0c005a;
         public static final int imgPhone=0x7f0c005f;
@@ -1646,7 +1646,7 @@ containing a value of this type.
         public static final int line3=0x7f0c006e;
         public static final int listMode=0x7f0c0009;
         public static final int list_item=0x7f0c0028;
-        public static final int lstHighScoreList=0x7f0c004e;
+        public static final int lstHighScoreList=0x7f0c004d;
         public static final int media_actions=0x7f0c0068;
         public static final int middle=0x7f0c001a;
         public static final int multiply=0x7f0c0013;

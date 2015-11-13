@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="questionapp.gyula.gs.com.questionapp.IntroductionActivity"
+    >
+
+    <ImageView
+        android:id="@+id/imgWelcomeImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/mainimage"
+        android:layout_centerVertical="true"
+        android:layout_margin="5sp"
+        />
+
+    <TextView
+        android:id="@+id/txtGreeting"
+        android:text="Howdy!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/imgWelcomeImage"
+        />
+
+    <Button
+        android:id="@+id/btnStartGame"
+        android:text="Start game"
+        android:layout_width="150sp"
+        android:layout_height="90sp"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25sp"
+        />
+
+    <Button
+        android:id="@+id/btnStats"
+        android:text="High Scores"
+        android:layout_width="150sp"
+        android:layout_height="90sp"
+        android:layout_below="@+id/btnStartGame"
+        android:layout_marginTop="5sp"
+        android:layout_alignLeft="@id/btnStartGame"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnAbout"
+        android:text="About"
+        android:layout_width="150sp"
+        android:layout_height="90sp"
+        android:layout_below="@+id/btnStats"
+        android:layout_marginTop="5sp"
+        android:layout_alignLeft="@id/btnStartGame"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtHighScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtGreeting"
+        android:text="Current high score is held by \n Gyula\n with the score of\n 10"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"
+       android:gravity="center"/>
+</RelativeLayout>

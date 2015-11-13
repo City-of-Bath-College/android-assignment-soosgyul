@@ -492,7 +492,7 @@ int id image 0x7f0c0026
 int id imgEmail 0x7f0c0061
 int id imgEmoji 0x7f0c005b
 int id imgGithub 0x7f0c0063
-int id imgHighScoreBanner 0x7f0c004d
+int id imgHighScoreBanner 0x7f0c004e
 int id imgLocation 0x7f0c005d
 int id imgMainImage 0x7f0c005a
 int id imgPhone 0x7f0c005f
@@ -505,7 +505,7 @@ int id line1 0x7f0c006a
 int id line3 0x7f0c006e
 int id listMode 0x7f0c0009
 int id list_item 0x7f0c0028
-int id lstHighScoreList 0x7f0c004e
+int id lstHighScoreList 0x7f0c004d
 int id media_actions 0x7f0c0068
 int id middle 0x7f0c001a
 int id multiply 0x7f0c0013

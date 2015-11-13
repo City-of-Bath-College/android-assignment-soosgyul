@@ -6,26 +6,10 @@
     tools:context="questionapp.gyula.gs.com.questionapp.HighScoreActivity"
     android:background="#607d8b">
 
-    <ImageView
-        android:id="@+id/imgHighScoreBanner"
-        android:layout_width="match_parent"
-        android:layout_height="100sp"
-        android:src="#020202"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="These are the highscores"
-        android:textColor="#274B61"
-        android:textSize="25sp"
-        android:layout_alignBottom="@+id/imgHighScoreBanner"
-        android:layout_alignTop="@+id/imgHighScoreBanner"
-        android:gravity="center"/>
-    <ListView
+      <ListView
         android:id="@+id/lstHighScoreList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/imgHighScoreBanner"
         android:padding="10sp" />
 
 </RelativeLayout>
