@@ -84,7 +84,7 @@ public class IntroductionActivity extends AppCompatActivity {
             txtHighScore.setText("Current high score is held by\n" + playerName + "\nwith the score of \n"+ maxScore);
         }else{
             //have a message if there are no high scores saved at all
-            txtHighScore.setText("There are no high scores stored in the database");
+            txtHighScore.setText("There are no high scores\nstored in the database");
         }
         //this method will loop through all the highscores and will display the highest
         /*List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());

@@ -3,10 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="questionapp.gyula.gs.com.questionapp.HighScoreActivity">
 
-    <item
-        android:id="@+id/reset_database"
-        android:title="Delete Highscores"
-        android:orderInCategory="100"
-        app:showAsAction="never"
-        />
+<item
+    android:id="@+id/reset"
+    android:title="Delete">
+
+</item>
 </menu>
