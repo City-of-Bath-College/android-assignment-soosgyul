@@ -12,7 +12,7 @@ public class ProfileCard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_card);
     }
-
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -34,4 +34,5 @@ public class ProfileCard extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    */
 }

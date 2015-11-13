@@ -14,7 +14,7 @@
     android:padding="20sp"
         android:layout_marginBottom="10sp"
     android:textColor="#FFFFFF"
-    android:background="#00000e"
+    android:background="#274B61"
     android:text="Gyula on 2015/11/11 \nScored: 5"/>
 
 </LinearLayout>

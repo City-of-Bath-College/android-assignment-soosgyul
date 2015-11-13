@@ -35,22 +35,7 @@ public class IntroductionActivity extends AppCompatActivity {
 
 
         //get user prefs
-        List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
 
-        int maxScore = 0;
-        if (highScores.size() > 0){
-            for( int i = 0; i < highScores.size(); i++){
-
-                HighScoreObject h = highScores.get(i);
-                if (h.getScore() > maxScore ){
-                    maxScore = h.getScore();
-                }
-            }
-            txtHighScore.setText("Current high score is: "+ maxScore);
-        }else{
-            //have a message if there are no high scores saved at all
-            txtHighScore.setText("There are no high scores stored in the database");
-        }
 
 
         btnPlay.setOnClickListener(new View.OnClickListener() {
@@ -83,8 +68,26 @@ public class IntroductionActivity extends AppCompatActivity {
         updateTheHighScoreOnMainScreen();
     }
     private void updateTheHighScoreOnMainScreen() {
-        //this method will loop through all the highscores and will display the highest
         List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
+
+        int maxScore = 0;
+        String playerName = new String();
+        if (highScores.size() > 0){
+            for( int i = 0; i < highScores.size(); i++){
+
+                HighScoreObject h = highScores.get(i);
+                if (h.getScore() > maxScore ){
+                    maxScore = h.getScore();
+                    playerName = h.getName();
+                }
+            }
+            txtHighScore.setText("Current high score is held by\n" + playerName + "\nwith the score of \n"+ maxScore);
+        }else{
+            //have a message if there are no high scores saved at all
+            txtHighScore.setText("There are no high scores stored in the database");
+        }
+        //this method will loop through all the highscores and will display the highest
+        /*List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
 
         int maxScore = 0;
         if (highScores.size() > 0){
@@ -100,7 +103,7 @@ public class IntroductionActivity extends AppCompatActivity {
         }else{
             //have a message if there are no high scores saved at all
             txtHighScore.setText("There are no high scores stored in the database");
-        }
+        }*/
     }
 
 

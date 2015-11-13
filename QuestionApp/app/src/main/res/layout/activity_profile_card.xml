@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="questionapp.gyula.gs.com.questionapp.ProfileCard">
+    tools:context="questionapp.gyula.gs.com.questionapp.ProfileCard"
+    android:background="#BECAD1">
 
     <ImageView
         android:id="@+id/imgMainImage"
@@ -15,7 +16,7 @@
         android:id="@+id/imgEmoji"
         android:layout_width="75sp"
         android:layout_height="75sp"
-        android:src="@drawable/emoji"
+        android:src="@drawable/gyula"
         android:layout_below="@+id/imgMainImage"
         android:layout_marginTop="-50sp"
         android:layout_marginLeft="30sp"/>
@@ -52,7 +53,8 @@
         android:layout_alignBottom="@+id/imgLocation"
         android:layout_alignTop="@+id/imgLocation"
         android:gravity="center_vertical"
-        android:layout_toRightOf="@+id/imgLocation"/>
+        android:layout_toRightOf="@+id/imgLocation"
+        />
 
     <ImageView
         android:id="@+id/imgPhone"

@@ -10,12 +10,12 @@
         android:layout_height="150dp"
         android:src="@drawable/mainimage"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15sp"
+        android:layout_marginTop="5sp"
         />
 
     <TextView
         android:id="@+id/txtGreeting"
-        android:text="Howdy!\n"
+        android:text="Howdy!"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgWelcomeImage"
@@ -55,8 +55,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnAbout"
-        android:text="Current high score:"
+        android:text="Current high score is held by \n Gyula\n with the score of\n 10"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10sp"/>
-
+        android:layout_marginTop="25sp"
+        android:textStyle="bold"
+       android:gravity="center"/>
 </RelativeLayout>
