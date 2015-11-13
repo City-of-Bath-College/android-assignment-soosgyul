@@ -9,18 +9,18 @@ public class QuestionObject {
     private String option2;
     private boolean answer;
     private int picture;
+    private String explanation;
 
-    public QuestionObject(String question, boolean answer, int picture, String option1, String option2){
+    public QuestionObject(String question, boolean answer, int picture, String option1, String option2, String explanation){
         this.question = question;
         this.answer = answer;
         this.picture = picture;
         this.option1 = option1;
         this.option2 = option2;
+        this.explanation = explanation;
     }
 
-    public String getQuestion() {
-        return question;
-    }
+    public String getQuestion() {return question;}
 
     public boolean isAnswer(){
         return answer;
@@ -37,4 +37,6 @@ public class QuestionObject {
     public String getOption2(){
         return option2;
     }
+
+    public String getExplanation() {return explanation;}
 }

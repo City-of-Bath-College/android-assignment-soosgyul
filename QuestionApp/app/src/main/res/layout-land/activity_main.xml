@@ -54,7 +54,7 @@
         android:text="Score: 0"
         android:textColor="#FFFFFF"
         android:layout_below="@id/btnFalse"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="5dp"
         android:layout_alignLeft="@id/imgPicture"
         android:layout_alignRight="@id/imgPicture"
         android:gravity="center"/>
