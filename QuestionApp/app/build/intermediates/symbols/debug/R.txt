@@ -458,7 +458,7 @@ int id action_menu_presenter 0x7f0c0003
 int id action_mode_bar 0x7f0c003b
 int id action_mode_bar_stub 0x7f0c003a
 int id action_mode_close_button 0x7f0c0023
-int id action_settings 0x7f0c0073
+int id action_settings 0x7f0c0074
 int id activity_chooser_view_content 0x7f0c0024
 int id alertTitle 0x7f0c002e
 int id always 0x7f0c001b
@@ -516,6 +516,7 @@ int id parentPanel 0x7f0c002b
 int id progress_circular 0x7f0c0005
 int id progress_horizontal 0x7f0c0006
 int id radio 0x7f0c0038
+int id reset_database 0x7f0c0073
 int id screen 0x7f0c0014
 int id scrollView 0x7f0c0030
 int id search_badge 0x7f0c0042

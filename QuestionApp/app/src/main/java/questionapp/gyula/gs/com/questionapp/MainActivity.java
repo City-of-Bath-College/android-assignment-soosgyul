@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         questions.add(new QuestionObject("Where was the picture taken?", true, R.drawable.cuba, "cuba", "singapore", "the picture has cars in it!"));
         questions.add(new QuestionObject("This city is in which country?", false, R.drawable.barcelona, "Hungary", "Spain", "The beaches of barcelona"));
         questions.add(new QuestionObject("The steak should never be served:", true, R.drawable.steak, "well done", "medium", "blu, rare, medium-rare, medium, medium-well. These are all acceptable."));
-
+/*
         questions.add(new QuestionObject("Who is on the picture?", true, R.drawable.nationalanthem, "Sacha Baron Cohen", "Freddie Mercury", "the picture has cars in it!"));
         questions.add(new QuestionObject("If you pay, you can swim alone in china?", true, R.drawable.china, "It is true", "Twaddle", "the picture has cars in it!"));
         questions.add(new QuestionObject("How much liquid you can take to an airplane?", false, R.drawable.customs, "no more than 1l", "10x100ml", "the picture has cars in it!"));
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         questions.add(new QuestionObject("This should be...", true, R.drawable.flipflops, "illegal", "compulsory", "the picture has cars in it!"));
         questions.add(new QuestionObject("What do you need to bring to a netflix and chill session?", false, R.drawable.valentinesday, "popcorn", "durex", "the picture has cars in it!"));
         questions.add(new QuestionObject("What is on the picture?", false, R.drawable.pufferfish, "Baseball ball", "Pufferfish", "the picture has cars in it!"));
-
+*/
     }
     //this puts the questions together. stops when there are no more questions
     private void setUpQuestions(){
@@ -142,8 +142,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         playerName = input.getText().toString();
                         //high score
-                        if (playerName == " "){
-                            playerName = "Anonymus";
+                        if (playerName.length() == 0){ //when the player doesn't enter anything for name, he will be called anonymous
+                            playerName = "Anonymous";
                         }
                         HighScoreObject highScore = new HighScoreObject(playerName, score, new Date().getTime());
                         //get user prefs
