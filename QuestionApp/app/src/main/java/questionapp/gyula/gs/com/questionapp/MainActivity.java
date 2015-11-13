@@ -103,31 +103,37 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(MainActivity.this, theMessage, Toast.LENGTH_SHORT).show();
     }
 
+
+
     private void endGame(){
-        final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this)
-                .setTitle("Congratulations")
-                .setMessage("You scored " + score + " points this round.")
-                .setNeutralButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                //high score
-                HighScoreObject highScore = new HighScoreObject("Gyula", score, new Date().getTime());
-                //get user prefs
-                List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
 
-                //add item
-                highScores.add(highScore);
+        AlertDialog.Builder builder= new AlertDialog.Builder(this);
 
-                //save again
-                Paper.book().write("high scores", highScores);
+                builder.setTitle("Congratulations!");
+                final EditText input = new EditText(this);
+                builder.setView(input);
+                builder.setMessage("You scored " + score + " point(s) this round.\nPlease enter your name:" );
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        playerName = input.getText().toString();
+                        //high score
+                        HighScoreObject highScore = new HighScoreObject(playerName, score, new Date().getTime());
+                        //get user prefs
+                        List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
 
-                //return to the intro screen
-                finish();
-            }
-        })
+                        //add item
+                        highScores.add(highScore);
+
+                        //save again
+                        Paper.book().write("high scores", highScores);
+
+                        //return to the intro screen
+                        finish();
+                    }
+                })
                 .create();
-        alertDialog.show();
-        //i'll start the game again here, so there is no cheating
-        //startGame();
+        builder.show();
     }
 
     private void startGame(){

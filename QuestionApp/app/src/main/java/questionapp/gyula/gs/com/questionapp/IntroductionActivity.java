@@ -33,9 +33,6 @@ public class IntroductionActivity extends AppCompatActivity {
         txtHighScore = (TextView)findViewById(R.id.txtHighScore);
         Paper.init(this);
 
-<<<<<<< HEAD
-=======
-
 
         //get user prefs
         List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
@@ -56,7 +53,6 @@ public class IntroductionActivity extends AppCompatActivity {
         }
 
 
->>>>>>> origin/master
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
