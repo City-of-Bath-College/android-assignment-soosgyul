@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="questionapp.gyula.gs.com.questionapp.HighScoreActivity">
 
-
+    <item
+        android:id="@+id/delete"
+        android:title="Delete Highscores"
+        android:icon="@drawable/ic_delete_white_24dp"
+        ></item>
 
 </menu>

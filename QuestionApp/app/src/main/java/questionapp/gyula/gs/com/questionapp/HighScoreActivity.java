@@ -78,35 +78,33 @@ public class HighScoreActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_profile_card, menu);
-
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selectionprivate void answerResultAlert(String feedback){
-
+        //int id = item.getItemId();
         AlertDialog.Builder warning = new AlertDialog.Builder(this);
 
-        warning.setTitle("Warning!");
-        warning.setMessage("This action cannot be undone. Are you sure you want to delete the database?");
-        warning.setPositiveButton("ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                //only when the ok is clicked will continue to run the program
-                deleteDatabase();
-            }
-        });
-
-        warning.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        warning.create();
-        warning.show();
-
-
-        return true;
+ //
+           // return true;
+            warning.setTitle("Warning!");
+            warning.setMessage("This action cannot be undone. Are you sure you want to delete the database?");
+            warning.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    //only when the ok is clicked will continue to run the program
+                    deleteDatabase();
+                }
+            });
+            warning.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+            warning.create();
+            warning.show();
+        //}
+        return super.onOptionsItemSelected(item);
     }
 
     public void deleteDatabase(){

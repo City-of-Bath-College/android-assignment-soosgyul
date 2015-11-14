@@ -1603,7 +1603,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c003b;
         public static final int action_mode_bar_stub=0x7f0c003a;
         public static final int action_mode_close_button=0x7f0c0023;
-        public static final int action_settings=0x7f0c0073;
+        public static final int action_settings=0x7f0c0074;
         public static final int activity_chooser_view_content=0x7f0c0024;
         public static final int alertTitle=0x7f0c002e;
         public static final int always=0x7f0c001b;
@@ -1623,6 +1623,7 @@ containing a value of this type.
         public static final int customPanel=0x7f0c0032;
         public static final int decor_content_parent=0x7f0c003c;
         public static final int default_activity_button=0x7f0c0027;
+        public static final int delete=0x7f0c0073;
         public static final int disableHome=0x7f0c000c;
         public static final int edit_query=0x7f0c0040;
         public static final int end=0x7f0c0019;
