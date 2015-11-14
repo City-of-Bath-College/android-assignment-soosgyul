@@ -1,10 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:background="#607d8b">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#26A69A">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        >
+    </include>
 
     <ImageView
         android:id="@+id/imgPicture"
@@ -12,6 +17,8 @@
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_below="@id/tool_bar"
+        android:layout_marginTop="25sp"
         android:src="#FFF000" />
 
     <TextView
@@ -34,6 +41,8 @@
         android:text="Option 1"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@id/imgPicture"
+        android:layout_marginRight="15sp"
+
         />
 
     <Button
@@ -44,6 +53,8 @@
         android:layout_below="@+id/btnTrue"
         android:layout_alignParentRight="true"
         android:layout_alignBottom="@id/imgPicture"
+        android:layout_alignLeft="@id/btnTrue"
+        android:layout_marginRight="15sp"
 
         />
 

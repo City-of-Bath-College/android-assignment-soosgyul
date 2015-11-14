@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#607d8b">
+    android:background="#26A69A">
 
     <include
         android:id="@+id/tool_bar"
@@ -58,7 +58,8 @@
         android:text="Score: 0"
         android:textColor="#FFFFFF"
         android:layout_below="@id/btnTrue"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="35dp"
+        android:padding="10sp"
         android:layout_alignParentRight="true"/>
 
 </RelativeLayout>

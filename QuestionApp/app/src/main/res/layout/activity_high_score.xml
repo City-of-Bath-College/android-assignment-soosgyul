@@ -4,12 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="questionapp.gyula.gs.com.questionapp.HighScoreActivity"
-    android:background="#607d8b">
+    android:background="#26A69A">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        ></include>
 
       <ListView
         android:id="@+id/lstHighScoreList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+          android:layout_below="@id/tool_bar"
         android:padding="10sp" />
 
 </RelativeLayout>
