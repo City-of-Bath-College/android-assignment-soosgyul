@@ -72,9 +72,8 @@ public class HighScoreActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-
-
         getMenuInflater().inflate(R.menu.menu_profile_card, menu);
+
         return true;
     }
 

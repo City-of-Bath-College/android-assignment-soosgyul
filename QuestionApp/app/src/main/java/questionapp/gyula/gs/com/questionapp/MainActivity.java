@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
@@ -26,7 +27,7 @@ import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private Toolbar toolbar;  //declaring the toolbar
     //variables for the app
     private Button btnFalse;
     private Button btnTrue;
@@ -46,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        toolbar = (Toolbar) findViewById(R.id.tool_bar); // Attaching the layout to the toolbar object
+        setSupportActionBar(toolbar);                   // Setting toolbar as the ActionBar with setSupportActionBar() call
 
         startGame();
         Paper.init(this);
