@@ -29,8 +29,10 @@
         android:layout_width="150sp"
         android:layout_height="50sp"
         android:layout_below="@+id/txtGreeting"
-        android:layout_marginTop="10sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:background="#00796B"
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:id="@+id/btnStats"
@@ -38,8 +40,10 @@
         android:layout_width="150sp"
         android:layout_height="50sp"
         android:layout_below="@+id/btnStartGame"
-        android:layout_marginTop="10sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:background="#00796B"
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:id="@+id/btnAbout"
@@ -47,8 +51,11 @@
         android:layout_width="150sp"
         android:layout_height="50sp"
         android:layout_below="@+id/btnStats"
-        android:layout_marginTop="10sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:background="#00796B"
+        android:textColor="#FFFFFF"
+        />
 
     <TextView
         android:id="@+id/txtHighScore"

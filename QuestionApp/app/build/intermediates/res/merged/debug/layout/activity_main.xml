@@ -39,7 +39,9 @@
         android:text="Option 1"
         android:layout_margin="10dp"
         android:layout_below="@+id/lblQuestion"
-        android:layout_alignParentLeft="true"/>
+        android:layout_alignParentLeft="true"
+        android:background="#00796B"
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:id="@+id/btnFalse"
@@ -49,6 +51,8 @@
         android:layout_below="@+id/lblQuestion"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
+        android:background="#00796B"
+        android:textColor="#FFFFFF"
         />
 
     <TextView

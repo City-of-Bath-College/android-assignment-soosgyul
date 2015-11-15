@@ -15,6 +15,7 @@
     android:layout_marginBottom="10sp"
     android:textColor="#FFFFFF"
     android:background="#00897B"
-    android:text="Gyula on 2015/11/11 \nScored: 5"/>
+    android:text="Gyula on 2015/11/11 \nScored: 5"
+    android:elevation="4dp"/>
 
 </LinearLayout>

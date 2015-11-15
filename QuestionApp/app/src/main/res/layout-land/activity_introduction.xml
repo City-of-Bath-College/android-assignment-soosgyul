@@ -27,32 +27,38 @@
         android:id="@+id/btnStartGame"
         android:text="Start game"
         android:layout_width="150sp"
-        android:layout_height="90sp"
-        android:layout_marginTop="25sp"
+        android:layout_height="70sp"
+        android:layout_marginTop="35sp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentRight="true"
         android:layout_marginRight="25sp"
+        android:background="#00796B"
+        android:textColor="#FFFFFF"
         />
 
     <Button
         android:id="@+id/btnStats"
         android:text="High Scores"
         android:layout_width="150sp"
-        android:layout_height="90sp"
+        android:layout_height="70sp"
         android:layout_below="@+id/btnStartGame"
-        android:layout_marginTop="5sp"
+        android:layout_marginTop="25sp"
         android:layout_alignLeft="@id/btnStartGame"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="#00796B"
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:id="@+id/btnAbout"
         android:text="About"
         android:layout_width="150sp"
-        android:layout_height="90sp"
+        android:layout_height="70sp"
         android:layout_below="@+id/btnStats"
-        android:layout_marginTop="5sp"
+        android:layout_marginTop="25sp"
         android:layout_alignLeft="@id/btnStartGame"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:background="#00796B"
+        android:textColor="#FFFFFF"/>
 
     <TextView
         android:id="@+id/txtHighScore"
