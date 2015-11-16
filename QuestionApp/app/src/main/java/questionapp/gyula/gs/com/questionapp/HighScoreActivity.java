@@ -77,7 +77,7 @@ public class HighScoreActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_profile_card, menu);
+        getMenuInflater().inflate(R.menu.menu_high_score, menu);
         return true;
     }
 
@@ -89,7 +89,7 @@ public class HighScoreActivity extends AppCompatActivity {
 
  //
            // return true;
-            warning.setTitle("Warning!");
+            warning.setTitle("Erasing high score database");
             warning.setMessage("This action cannot be undone. Are you sure you want to delete the database?");
             warning.setPositiveButton("ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
