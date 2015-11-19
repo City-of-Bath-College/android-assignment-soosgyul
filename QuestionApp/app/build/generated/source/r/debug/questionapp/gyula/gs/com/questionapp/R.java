@@ -1570,22 +1570,21 @@ containing a value of this type.
         public static final int cuba=0x7f020040;
         public static final int customs=0x7f020041;
         public static final int deface=0x7f020042;
-        public static final int emoji=0x7f020043;
-        public static final int flipflops=0x7f020044;
-        public static final int gyula=0x7f020045;
-        public static final int ic_code_black_24dp=0x7f020046;
-        public static final int ic_delete_white_24dp=0x7f020047;
-        public static final int ic_http_black_24dp=0x7f020048;
-        public static final int ic_launcher=0x7f020049;
-        public static final int ic_location_on_black_24dp=0x7f02004a;
-        public static final int ic_phone_black_24dp=0x7f02004b;
-        public static final int mainimage=0x7f02004c;
-        public static final int nationalanthem=0x7f02004d;
-        public static final int newyork=0x7f02004e;
-        public static final int notification_template_icon_bg=0x7f020052;
-        public static final int pufferfish=0x7f02004f;
-        public static final int steak=0x7f020050;
-        public static final int valentinesday=0x7f020051;
+        public static final int flipflops=0x7f020043;
+        public static final int gyula=0x7f020044;
+        public static final int ic_code_black_24dp=0x7f020045;
+        public static final int ic_delete_white_24dp=0x7f020046;
+        public static final int ic_http_black_24dp=0x7f020047;
+        public static final int ic_launcher=0x7f020048;
+        public static final int ic_location_on_black_24dp=0x7f020049;
+        public static final int ic_phone_black_24dp=0x7f02004a;
+        public static final int mainimage=0x7f02004b;
+        public static final int nationalanthem=0x7f02004c;
+        public static final int newyork=0x7f02004d;
+        public static final int notification_template_icon_bg=0x7f020051;
+        public static final int pufferfish=0x7f02004e;
+        public static final int steak=0x7f02004f;
+        public static final int valentinesday=0x7f020050;
     }
     public static final class id {
         public static final int action0=0x7f0c0065;

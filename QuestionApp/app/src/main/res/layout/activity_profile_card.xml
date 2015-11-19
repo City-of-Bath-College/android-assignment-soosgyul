@@ -3,6 +3,7 @@
     android:layout_height="match_parent"
     tools:context="questionapp.gyula.gs.com.questionapp.ProfileCard">
 
+    <!-- the main image-->
     <ImageView
         android:id="@+id/imgMainImage"
         android:layout_width="wrap_content"
@@ -10,7 +11,8 @@
         android:src="@drawable/newyork"
         android:scaleType="centerCrop"
         />
-    
+
+    <!-- a picture about the author-->
     <ImageView
         android:id="@+id/imgEmoji"
         android:layout_width="75sp"
@@ -20,6 +22,7 @@
         android:layout_marginTop="-50sp"
         android:layout_marginLeft="30sp"/>
 
+    <!-- author name-->
     <TextView
         android:id="@+id/txtName"
         android:text="Gyula Soos"
@@ -33,6 +36,7 @@
         android:gravity="bottom"
         android:layout_toRightOf="@+id/imgEmoji"/>
 
+    <!-- author location icon-->
     <ImageView
         android:id="@+id/imgLocation"
         android:layout_width="50sp"
@@ -41,6 +45,8 @@
         android:layout_below="@+id/imgEmoji"
         android:layout_marginTop="15sp"
         android:layout_marginLeft="30sp"/>
+
+    <!-- author location text-->
     <TextView
         android:id="@+id/txtLocation"
         android:layout_width="wrap_content"
@@ -54,7 +60,7 @@
         android:gravity="center_vertical"
         android:layout_toRightOf="@+id/imgLocation"
         />
-
+    <!-- author phone icon-->
     <ImageView
         android:id="@+id/imgPhone"
         android:layout_width="50sp"
@@ -63,6 +69,8 @@
         android:layout_below="@+id/imgLocation"
         android:layout_marginTop="5sp"
         android:layout_marginLeft="30sp"/>
+
+    <!--author phone text-->
     <TextView
         android:id="@+id/txtPhone"
         android:layout_width="wrap_content"
@@ -75,7 +83,7 @@
         android:layout_alignTop="@+id/imgPhone"
         android:gravity="center_vertical"
         android:layout_toRightOf="@+id/imgPhone"/>
-
+    <!--author email icon-->
     <ImageView
         android:id="@+id/imgEmail"
         android:layout_width="50sp"
@@ -84,6 +92,7 @@
         android:layout_below="@+id/imgPhone"
         android:layout_marginTop="5sp"
         android:layout_marginLeft="30sp"/>
+    <!--author email text-->
     <TextView
         android:id="@+id/txtEmail"
         android:layout_width="wrap_content"
@@ -96,7 +105,7 @@
         android:layout_alignTop="@+id/imgEmail"
         android:gravity="center_vertical"
         android:layout_toRightOf="@+id/imgEmail"/>
-
+    <!--author github icon-->
     <ImageView
         android:id="@+id/imgGithub"
         android:layout_width="50sp"
@@ -105,6 +114,7 @@
         android:layout_below="@+id/imgEmail"
         android:layout_marginTop="5sp"
         android:layout_marginLeft="30sp"/>
+    <!--author github text-->
     <TextView
         android:id="@+id/txtGithub"
         android:layout_width="wrap_content"
@@ -117,7 +127,4 @@
         android:layout_alignTop="@+id/imgGithub"
         android:gravity="center_vertical"
         android:layout_toRightOf="@+id/imgGithub"/>
-
-
-
 </RelativeLayout>

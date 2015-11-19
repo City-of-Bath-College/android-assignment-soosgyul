@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="questionapp.gyula.gs.com.questionapp.HighScoreActivity">
-
+    <!--menu item to be able to delete the highscores-->
     <item
         android:id="@+id/delete"
         android:title="Delete"

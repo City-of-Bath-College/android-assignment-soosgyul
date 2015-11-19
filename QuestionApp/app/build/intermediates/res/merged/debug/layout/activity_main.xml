@@ -3,14 +3,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="#26A69A">
-
+    <!-- the toolbar-->
     <include
         android:id="@+id/tool_bar"
-        layout="@layout/tool_bar"
-        >
-
+        layout="@layout/tool_bar">
     </include>
 
+    <!-- The image for the question-->
     <ImageView
         android:id="@+id/imgPicture"
         android:layout_width="200dp"
@@ -20,6 +19,7 @@
         android:layout_marginTop="25sp"
         android:src="#FFF000" />
 
+    <!-- The question itself-->
     <TextView
         android:id="@+id/lblQuestion"
         android:layout_width="match_parent"
@@ -32,6 +32,7 @@
         android:textColor="#FFFFFF"
         android:textSize="20dp" />
 
+    <!-- button for answer-->
     <Button
         android:id="@+id/btnRight"
         android:layout_width="150dp"
@@ -43,6 +44,7 @@
         android:background="#00796B"
         android:textColor="#FFFFFF"/>
 
+    <!-- button for answer-->
     <Button
         android:id="@+id/btnLeft"
         android:layout_width="150dp"
@@ -55,6 +57,7 @@
         android:textColor="#FFFFFF"
         />
 
+    <!-- text to keep current score-->
     <TextView
         android:id="@+id/txtScore"
         android:layout_width="wrap_content"

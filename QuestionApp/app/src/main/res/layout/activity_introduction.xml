@@ -4,6 +4,7 @@
     tools:context="questionapp.gyula.gs.com.questionapp.IntroductionActivity"
     >
 
+    <!-- The main image-->
     <ImageView
         android:id="@+id/imgWelcomeImage"
         android:layout_width="150dp"
@@ -13,6 +14,7 @@
         android:layout_marginTop="5sp"
         />
 
+    <!-- Welcome message: howdy -->
     <TextView
         android:id="@+id/txtGreeting"
         android:text="Howdy!"
@@ -23,6 +25,7 @@
         android:gravity="center_horizontal"
         />
 
+    <!-- Start button-->
     <Button
         android:id="@+id/btnStartGame"
         android:text="Start game"
@@ -34,6 +37,7 @@
         android:background="#00796B"
         android:textColor="#FFFFFF"/>
 
+    <!-- highscore button-->
     <Button
         android:id="@+id/btnStats"
         android:text="High Scores"
@@ -45,6 +49,7 @@
         android:background="#00796B"
         android:textColor="#FFFFFF"/>
 
+    <!-- about button-->
     <Button
         android:id="@+id/btnAbout"
         android:text="About"
@@ -57,6 +62,7 @@
         android:textColor="#FFFFFF"
         />
 
+    <!--current highscore text-->
     <TextView
         android:id="@+id/txtHighScore"
         android:layout_width="wrap_content"

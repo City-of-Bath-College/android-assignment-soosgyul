@@ -2,8 +2,8 @@ package questionapp.gyula.gs.com.questionapp;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -108,6 +108,8 @@ public class HighScoreActivity extends AppCompatActivity {
     }
 //function to delete the database , reload the screen and display a confirmation message
     public void deleteDatabase(){
+
+
         Paper.book().destroy();//delete the database
         super.recreate();
         Toast.makeText(this, "Database deleted", Toast.LENGTH_SHORT).show();

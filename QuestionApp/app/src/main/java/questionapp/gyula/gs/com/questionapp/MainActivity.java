@@ -1,9 +1,10 @@
 package questionapp.gyula.gs.com.questionapp;
 //imports for the app
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
@@ -43,26 +44,14 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.tool_bar); // Attaching the layout to the toolbar object
         setSupportActionBar(toolbar);                   // Setting toolbar as the ActionBar with setSupportActionBar() call
 
+        questions = QuestionUtils.generalKnowledgeQuestions(); //setting up the array of questions from the QuestionUtils class
         startGame(); //calling the start game function
         Paper.init(this);
     }
 
     //this holds the questions in an arraylist
-    private void generalKnowledgeQuestions(){
-        questions = new ArrayList<>();
-        //the first option is the button on the left. if the boolean set to false then the second option is correct
-        questions.add(new QuestionObject("Where was the picture taken?", true, R.drawable.cuba, "cuba", "singapore", "the picture has cars in it!"));
-        questions.add(new QuestionObject("This city is in which country?", false, R.drawable.barcelona, "Hungary", "Spain", "The beaches of barcelona"));
-        questions.add(new QuestionObject("The steak should never be served:", true, R.drawable.steak, "well done", "medium", "blu, rare, medium-rare, medium, medium-well. These are all acceptable."));
-/*
-        questions.add(new QuestionObject("Who is on the picture?", true, R.drawable.nationalanthem, "Sacha Baron Cohen", "Freddie Mercury", "the picture has cars in it!"));
-        questions.add(new QuestionObject("If you pay, you can swim alone in china?", true, R.drawable.china, "It is true", "Twaddle", "the picture has cars in it!"));
-        questions.add(new QuestionObject("How much liquid you can take to an airplane?", false, R.drawable.customs, "no more than 1l", "10x100ml", "the picture has cars in it!"));
-        questions.add(new QuestionObject("This is...", false, R.drawable.deface, "£10", "illegal in the uk", "the picture has cars in it!"));
-        questions.add(new QuestionObject("This should be...", true, R.drawable.flipflops, "illegal", "compulsory", "the picture has cars in it!"));
-        questions.add(new QuestionObject("What do you need to bring to a netflix and chill session?", false, R.drawable.valentinesday, "popcorn", "durex", "the picture has cars in it!"));
-        questions.add(new QuestionObject("What is on the picture?", false, R.drawable.pufferfish, "Baseball ball", "Pufferfish", "the picture has cars in it!"));
-*/
+   private void generalKnowledgeQuestions(){
+       QuestionUtils.generalKnowledgeQuestions(); //all the questions now are stored int the QuestionUtils class
     }
 
     //this puts the questions together on the activity. stops when there are no more questions
@@ -129,12 +118,13 @@ public class MainActivity extends AppCompatActivity {
             howGoodItWent = "Well, you tried";
         } else if (percentage > 0 && percentage <= 50) {
             howGoodItWent = "Thanks for participating" ;
-        }else if (percentage > 50) {
-            howGoodItWent = " Congratulations";
+        }else if (percentage > 50 && percentage <= 99) {
+            howGoodItWent = "Congratulations";
+        }else if (percentage ==100) {
+            howGoodItWent = "Perfect Score!";
         }else{
             howGoodItWent = "Error";
         }
-
 
         builder.setTitle(howGoodItWent);//displaying the message set earlier based on score
         final EditText input = new EditText(this);
@@ -145,7 +135,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 playerName = input.getText().toString();
-                //high score
+                //remove empty spaces
+                playerName = playerName.trim();
                 if (playerName.length() == 0){ //when the player doesn't enter anything for name, he will be called anonymous
                     playerName = "Anonymous";
                 }
