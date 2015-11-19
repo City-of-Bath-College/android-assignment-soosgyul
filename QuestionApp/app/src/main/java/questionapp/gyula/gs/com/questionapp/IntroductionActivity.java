@@ -16,7 +16,7 @@ import io.paperdb.Paper;
 
 public class IntroductionActivity extends AppCompatActivity {
 
-    private Button btnPlay;
+    private Button btnPlay; //declaring variables of the on screen elements
     private Button btnAbout;
     private Button btnStats;
     private TextView txtHighScore;
@@ -27,6 +27,7 @@ public class IntroductionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_introduction);
 
+        //assigning variables to buttons in the layout
         btnPlay = (Button)findViewById(R.id.btnStartGame);
         btnStats = (Button)findViewById(R.id.btnStats);
         btnAbout = (Button)findViewById(R.id.btnAbout);
@@ -37,36 +38,38 @@ public class IntroductionActivity extends AppCompatActivity {
         //get user prefs
 
 
-
+        //assigning the action to the variables created earlier
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(IntroductionActivity.this, MainActivity.class);
-                startActivity(i);
+            Intent i = new Intent(IntroductionActivity.this, MainActivity.class);
+            startActivity(i);
             }
         });
-
+        //assigning the action to the variables created earlier
         btnStats.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(IntroductionActivity.this, HighScoreActivity.class);
-                startActivity(i);
+            Intent i = new Intent(IntroductionActivity.this, HighScoreActivity.class);
+            startActivity(i);
             }
         });
-
+        //assigning the action to the variables created earlier
         btnAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(IntroductionActivity.this, ProfileCard.class);
-                startActivity(i);
+            Intent i = new Intent(IntroductionActivity.this, ProfileCard.class);
+            startActivity(i);
             }
         });
     }
-    @Override
+
+    @Override //when app created or resumed update the highscores currently stored in the database
     protected void onResume(){
         super.onResume();
         updateTheHighScoreOnMainScreen();
     }
+    //this method will loop through all the highscores and will display the highest
     private void updateTheHighScoreOnMainScreen() {
         List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
 
@@ -86,25 +89,5 @@ public class IntroductionActivity extends AppCompatActivity {
             //have a message if there are no high scores saved at all
             txtHighScore.setText("There are no high scores\nstored in the database");
         }
-        //this method will loop through all the highscores and will display the highest
-        /*List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
-
-        int maxScore = 0;
-        if (highScores.size() > 0){
-
-            for( int i = 0; i < highScores.size(); i++){
-
-                HighScoreObject h = highScores.get(i);
-                if (h.getScore() > maxScore ){
-                    maxScore = h.getScore();
-                }
-            }
-            txtHighScore.setText("Current high score is: "+ maxScore);
-        }else{
-            //have a message if there are no high scores saved at all
-            txtHighScore.setText("There are no high scores stored in the database");
-        }*/
     }
-
-
 }

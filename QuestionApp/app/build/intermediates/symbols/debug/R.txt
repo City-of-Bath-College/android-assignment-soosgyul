@@ -468,10 +468,10 @@ int id alertTitle 0x7f0c002e
 int id always 0x7f0c001b
 int id beginning 0x7f0c0018
 int id btnAbout 0x7f0c0053
-int id btnFalse 0x7f0c0058
+int id btnLeft 0x7f0c0058
+int id btnRight 0x7f0c0057
 int id btnStartGame 0x7f0c0051
 int id btnStats 0x7f0c0052
-int id btnTrue 0x7f0c0057
 int id buttonPanel 0x7f0c0034
 int id cancel_action 0x7f0c0066
 int id checkbox 0x7f0c0036

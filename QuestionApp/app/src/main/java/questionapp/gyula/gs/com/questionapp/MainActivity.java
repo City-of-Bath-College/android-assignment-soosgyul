@@ -1,23 +1,15 @@
 package questionapp.gyula.gs.com.questionapp;
-
+//imports for the app
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.text.InputType;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -29,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;  //declaring the toolbar
     //variables for the app
-    private Button btnFalse;
-    private Button btnTrue;
+    private Button btnLeft;
+    private Button btnRight;
     private TextView lblQuestion;
     private TextView txtScore;
     private ImageView imgPicture;
@@ -51,14 +43,13 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.tool_bar); // Attaching the layout to the toolbar object
         setSupportActionBar(toolbar);                   // Setting toolbar as the ActionBar with setSupportActionBar() call
 
-        startGame();
+        startGame(); //calling the start game function
         Paper.init(this);
     }
 
-    //this holds the questions
-    private void generateQuestions(){
+    //this holds the questions in an arraylist
+    private void generalKnowledgeQuestions(){
         questions = new ArrayList<>();
-
         //the first option is the button on the left. if the boolean set to false then the second option is correct
         questions.add(new QuestionObject("Where was the picture taken?", true, R.drawable.cuba, "cuba", "singapore", "the picture has cars in it!"));
         questions.add(new QuestionObject("This city is in which country?", false, R.drawable.barcelona, "Hungary", "Spain", "The beaches of barcelona"));
@@ -73,22 +64,23 @@ public class MainActivity extends AppCompatActivity {
         questions.add(new QuestionObject("What is on the picture?", false, R.drawable.pufferfish, "Baseball ball", "Pufferfish", "the picture has cars in it!"));
 */
     }
-    //this puts the questions together. stops when there are no more questions
+
+    //this puts the questions together on the activity. stops when there are no more questions
     private void setUpQuestions(){
         if (index == questions.size()){ //if no more questions, jumps to the endGame
-            Log.d("QuestionApp", "ended all the questions");
             endGame();
         }else {
             currentQuestion = questions.get(index);
 
             lblQuestion.setText(currentQuestion.getQuestion());
             imgPicture.setImageResource(currentQuestion.getPicture());
-            btnTrue.setText(currentQuestion.getOption1());
-            btnFalse.setText(currentQuestion.getOption2());
+            btnRight.setText(currentQuestion.getOption1());
+            btnLeft.setText(currentQuestion.getOption2());
             index++;
         }
     }
 
+    //this function will test if the player answer is correct. if correct will increase the score by one
     private void determineButtonPress(boolean answer){
         boolean expectedAnswer = currentQuestion.isAnswer();
         String result;
@@ -99,11 +91,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             result="False";
         }
+        //call this function to display the result to the player
         answerResultAlert(result);
 
     }
 
-    //this will generate an alert with explanation. This will replace the toasts.
+    //this will generate an alert with explanation. This replaces the toasts.
     private void answerResultAlert(String feedback){
         AlertDialog.Builder showResult = new AlertDialog.Builder(this);
 
@@ -120,57 +113,64 @@ public class MainActivity extends AppCompatActivity {
         showResult.show();
     }
 
+    //this is the endgame, which will generate a results alert with the score, and will prompt for the players name
     private void endGame(){
-
         AlertDialog.Builder builder= new AlertDialog.Builder(this);
-                String howGoodItWent;
-                int howManyQuestions = questions.size();
+        String howGoodItWent;
+        int howManyQuestions = questions.size();
+        //with the percentage calculations, the app is able to display a different finishing message based on the percentage of the allquestions/correct answers
+        float percentage = 0;
+        //test if there are any questions. this will prevent dividing with 0
+        if (howManyQuestions != 0){
+            percentage = (100*score)/howManyQuestions;
+        }
+        //different title message on 0 correct answers, between 1-50, and 51-100
+        if (score == 0) {
+            howGoodItWent = "Well, you tried";
+        } else if (percentage > 0 && percentage <= 50) {
+            howGoodItWent = "Thanks for participating" ;
+        }else if (percentage > 50) {
+            howGoodItWent = " Congratulations";
+        }else{
+            howGoodItWent = "Error";
+        }
 
-                if (score == 0) {
-                    howGoodItWent = "Well, you tried";
-                } else if (score > 0 && score <= 5) {
-                    howGoodItWent = "Thanks for participating";
-                }else if (score > 5) {
-                    howGoodItWent = " Congratulations";
-                }else{
-                    howGoodItWent = "Error";
-                }
 
-                builder.setTitle(howGoodItWent);
-                final EditText input = new EditText(this);
-                builder.setView(input);
+        builder.setTitle(howGoodItWent);//displaying the message set earlier based on score
+        final EditText input = new EditText(this);
+        builder.setView(input);
         builder.setMessage("You scored " + score + " point(s) this round.\nPlease enter your name:" );
         builder.setCancelable(false); //if this is not set, the user may click outside the alert, cancelling it. no cheating this way
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        playerName = input.getText().toString();
-                        //high score
-                        if (playerName.length() == 0){ //when the player doesn't enter anything for name, he will be called anonymous
-                            playerName = "Anonymous";
-                        }
-                        HighScoreObject highScore = new HighScoreObject(playerName, score, new Date().getTime());
-                        //get user prefs
-                        List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                playerName = input.getText().toString();
+                //high score
+                if (playerName.length() == 0){ //when the player doesn't enter anything for name, he will be called anonymous
+                    playerName = "Anonymous";
+                }
+                HighScoreObject highScore = new HighScoreObject(playerName, score, new Date().getTime());
+                //get user prefs
+                List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
 
-                        //add item
-                        highScores.add(highScore);
+                //add item
+                highScores.add(highScore);
 
-                        //save again
-                        Paper.book().write("high scores", highScores);
+                //save into paper
+                Paper.book().write("high scores", highScores);
 
-                        //return to the intro screen
-                        finish();
-                    }
-                })
-                .create();
+                //return to the intro screen
+                finish();
+                }
+        })
+        .create();
         builder.show();
     }
 
     private void startGame(){
-
-        btnFalse = (Button) findViewById(R.id.btnFalse);
-        btnTrue = (Button) findViewById(R.id.btnTrue);
+        //the start game process extracted from the onCreate - just to organise the code better
+        btnLeft = (Button) findViewById(R.id.btnLeft);
+        btnRight = (Button) findViewById(R.id.btnRight);
         lblQuestion = (TextView) findViewById(R.id.lblQuestion);
         imgPicture = (ImageView) findViewById(R.id.imgPicture);
         txtScore = (TextView) findViewById(R.id.txtScore);
@@ -178,21 +178,21 @@ public class MainActivity extends AppCompatActivity {
         index = 0;
         score = 0;
         txtScore.setText("Score: " + score);
-        //on click listeners
-        btnFalse.setOnClickListener(new View.OnClickListener() {
+        //on click listeners - detecting the buttonpresses
+        btnLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 determineButtonPress(false);
             }
         });
 
-        btnTrue.setOnClickListener(new View.OnClickListener() {
+        btnRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 determineButtonPress(true);
             }
         });
-        generateQuestions();
+        generalKnowledgeQuestions();
         setUpQuestions();
     }
 }

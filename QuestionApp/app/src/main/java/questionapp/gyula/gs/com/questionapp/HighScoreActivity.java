@@ -37,21 +37,21 @@ public class HighScoreActivity extends AppCompatActivity {
 
         listView = (ListView)findViewById(R.id.lstHighScoreList);
 
-        Paper.init(this);
+        Paper.init(this); //database to store highscores
 
         highscores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
 
 
         HighScoreAdapter adapter = new HighScoreAdapter(highscores);
-    listView.setAdapter(adapter);
-}
+        listView.setAdapter(adapter);
+    }
 
     private class HighScoreAdapter extends ArrayAdapter<HighScoreObject> {
         public HighScoreAdapter(List<HighScoreObject> items) {
             super(HighScoreActivity.this, 0, items);
         }
 
-        @Override
+        @Override //to expand the layout to accept text
         public View getView(int position, View convertView, ViewGroup parent) {
             if (convertView == null) {
                 convertView = getLayoutInflater().inflate(
@@ -72,31 +72,31 @@ public class HighScoreActivity extends AppCompatActivity {
         }//end getview
     }//end adapter class
 
-    //with this i will try to reset the scores
 
-    @Override
+    @Override //creating and inflating menu to delete highscores
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_high_score, menu);
         return true;
     }
 
-    @Override
+    @Override //when option selected, delete highscores
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selectionprivate void answerResultAlert(String feedback){
         //int id = item.getItemId();
         AlertDialog.Builder warning = new AlertDialog.Builder(this);
 
  //
-           // return true;
-            warning.setTitle("Erasing high score database");
+           // when icon clicked
+           // warning.setTitle("Erasing high score database");
             warning.setMessage("This action cannot be undone. Are you sure you want to delete the database?");
             warning.setPositiveButton("ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-                    //only when the ok is clicked will continue to run the program
+                    //only when the ok is clicked will continue to run the program and delete
                     deleteDatabase();
                 }
             });
+            //if cancel is clicked, don't do anything
             warning.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                 }
@@ -106,7 +106,7 @@ public class HighScoreActivity extends AppCompatActivity {
         //}
         return super.onOptionsItemSelected(item);
     }
-
+//function to delete the database , reload the screen and display a confirmation message
     public void deleteDatabase(){
         Paper.book().destroy();//delete the database
         super.recreate();

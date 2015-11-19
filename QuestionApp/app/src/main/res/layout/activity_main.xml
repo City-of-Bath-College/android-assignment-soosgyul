@@ -33,7 +33,7 @@
         android:textSize="20dp" />
 
     <Button
-        android:id="@+id/btnTrue"
+        android:id="@+id/btnRight"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:text="Option 1"
@@ -44,7 +44,7 @@
         android:textColor="#FFFFFF"/>
 
     <Button
-        android:id="@+id/btnFalse"
+        android:id="@+id/btnLeft"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:text="Option 2"
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:text="Score: 0"
         android:textColor="#FFFFFF"
-        android:layout_below="@id/btnTrue"
+        android:layout_below="@id/btnRight"
         android:layout_marginTop="35dp"
         android:padding="10sp"
         android:layout_alignParentRight="true"/>

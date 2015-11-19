@@ -35,7 +35,7 @@
         android:textSize="20dp" />
 
     <Button
-        android:id="@+id/btnTrue"
+        android:id="@+id/btnRight"
         android:layout_width="150dp"
         android:layout_height="90dp"
         android:text="Option 1"
@@ -48,14 +48,14 @@
         />
 
     <Button
-        android:id="@+id/btnFalse"
+        android:id="@+id/btnLeft"
         android:layout_width="150dp"
         android:layout_height="90dp"
         android:text="Option 2"
-        android:layout_below="@+id/btnTrue"
+        android:layout_below="@+id/btnRight"
         android:layout_alignParentRight="true"
         android:layout_alignBottom="@id/imgPicture"
-        android:layout_alignLeft="@id/btnTrue"
+        android:layout_alignLeft="@id/btnRight"
         android:layout_marginRight="15sp"
         android:layout_marginTop="25sp"
         android:background="#00796B"
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:text="Score: 0"
         android:textColor="#FFFFFF"
-        android:layout_below="@id/btnFalse"
+        android:layout_below="@id/btnLeft"
         android:layout_marginTop="5dp"
         android:layout_alignLeft="@id/imgPicture"
         android:layout_alignRight="@id/imgPicture"

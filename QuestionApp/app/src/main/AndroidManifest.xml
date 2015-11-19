@@ -7,23 +7,26 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Questionaire"
         android:theme="@style/AppTheme" >
+        <!--Main activity as the activity with the questions -->
         <activity
             android:name=".MainActivity"
             android:label="Questions">
         </activity>
+        <!--Activity for the profile card -->
         <activity
             android:name=".ProfileCard"
             android:label="About the author">
         </activity>
+        <!--The launcher screen, main screen of the app -->
         <activity
             android:name=".IntroductionActivity"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--Displaying highscores -->
         <activity
             android:name=".HighScoreActivity"
             android:label="High scores">

@@ -1609,10 +1609,10 @@ containing a value of this type.
         public static final int always=0x7f0c001b;
         public static final int beginning=0x7f0c0018;
         public static final int btnAbout=0x7f0c0053;
-        public static final int btnFalse=0x7f0c0058;
+        public static final int btnLeft=0x7f0c0058;
+        public static final int btnRight=0x7f0c0057;
         public static final int btnStartGame=0x7f0c0051;
         public static final int btnStats=0x7f0c0052;
-        public static final int btnTrue=0x7f0c0057;
         public static final int buttonPanel=0x7f0c0034;
         public static final int cancel_action=0x7f0c0066;
         public static final int checkbox=0x7f0c0036;
