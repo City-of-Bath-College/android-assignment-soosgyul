@@ -20,6 +20,8 @@ import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String KEY_INDEX = "index";
+    private static final String KEY_SCORE = "score";
     private Toolbar toolbar;  //declaring the toolbar
     //variables for the app
     private Button btnLeft;
@@ -41,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if (savedInstanceState != null){
+            index = savedInstanceState.getInt(KEY_INDEX, 0)-1;
+            score = savedInstanceState.getInt(KEY_SCORE, 0);
+        }else{
+            index = 0;
+            score = 0;
+        }
         toolbar = (Toolbar) findViewById(R.id.tool_bar); // Attaching the layout to the toolbar object
         setSupportActionBar(toolbar);                   // Setting toolbar as the ActionBar with setSupportActionBar() call
 
@@ -129,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         builder.setTitle(howGoodItWent);//displaying the message set earlier based on score
         final EditText input = new EditText(this);
         builder.setView(input);
-        builder.setMessage("You scored " + score + " point(s) this round.\nPlease enter your name:" );
+        builder.setMessage("You scored " + score + " point(s) this round.\nPlease enter your name:");
         builder.setCancelable(false); //if this is not set, the user may click outside the alert, cancelling it. no cheating this way
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
@@ -166,8 +175,6 @@ public class MainActivity extends AppCompatActivity {
         imgPicture = (ImageView) findViewById(R.id.imgPicture);
         txtScore = (TextView) findViewById(R.id.txtScore);
 
-        index = 0;
-        score = 0;
         txtScore.setText("Score: " + score);
         //on click listeners - detecting the buttonpresses
         btnLeft.setOnClickListener(new View.OnClickListener() {
@@ -185,5 +192,12 @@ public class MainActivity extends AppCompatActivity {
         });
         generalKnowledgeQuestions();
         setUpQuestions();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY_INDEX, index);
+        outState.putInt(KEY_SCORE, score);
     }
 }
