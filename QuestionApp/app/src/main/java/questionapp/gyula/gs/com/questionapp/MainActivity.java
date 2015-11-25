@@ -20,8 +20,8 @@ import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String KEY_INDEX = "index";
-    private static final String KEY_SCORE = "score";
+    private static final String KEY_INDEX = "index"; //variable to store state if screen is rotated
+    private static final String KEY_SCORE = "score"; //variable to store state if screen is rotated
     private Toolbar toolbar;  //declaring the toolbar
     //variables for the app
     private Button btnLeft;
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //if there is a state stored in the saved instance, then use those values. else set them to 0
         if (savedInstanceState != null){
             index = savedInstanceState.getInt(KEY_INDEX, 0)-1;
             score = savedInstanceState.getInt(KEY_SCORE, 0);
@@ -193,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
         generalKnowledgeQuestions();
         setUpQuestions();
     }
-
+//override to store the index and score in the saved instance state
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
